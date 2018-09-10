@@ -1,0 +1,48 @@
+@mixin slide-in-out {
+  .slide-enter {
+    transform: translateX(-100%);
+  }
+
+  .slide-enter-active {
+    transform: translateX(0);
+    transition: all 1s ease-in;
+  }
+
+  .slide-enter-done {
+    transform: translateX(0);
+  }
+
+  .slide-exit {
+    transform: translateX(0);
+  }
+
+  .slide-exit-active {
+    transform: translateX(-100%);
+    transition: all 1s ease-out;
+  }
+
+  .slide-exit-done {
+    transform: translateX(-100%);
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@include slide-in-out();
