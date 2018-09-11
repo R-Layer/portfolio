@@ -1,17 +1,29 @@
-.App {
-  text-align: center; }
+.is-current {
+  text-decoration: underline overline crimson;
+  background-color: lightcoral;
+  transition: all 150ms linear; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white; }
+.section-title {
+  background-color: #123;
+  color: #499;
+  padding: 1rem;
+  text-align: start;
+  font: italic 400 1.5rem Verdana; }
 
-.App-title {
-  font-size: 1.5em; }
+.project-title {
+  border-top: 1px dashed #222;
+  border-bottom: 1px dashed #222;
+  padding: 1rem;
+  text-align: center;
+  font: 500 1.2rem Verdana; }
 
-.App-intro {
-  font-size: large; }
+.bottom {
+  margin-bottom: 800px;
+  border: 1px solid red; }
+
+.very-bottom {
+  margin-bottom: 800px;
+  border: 1px solid red; }
 
 .slide-enter {
   transform: translateX(-100%); }
