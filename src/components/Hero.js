@@ -1,14 +1,16 @@
 import React from "react";
 
-export default () => {
+const Hero = props => {
   return (
-    <section className="hero is-fullheight is-dark is-bold">
+    <div className="hero is-fullheight is-dark is-bold">
       <div className="hero-body">
         <div className="container">
-          <h1 className="title">Hello Lorem</h1>
-          <h2 className="subtitle">I am ipsum</h2>
+          <p className="title">Hello Lorem</p>
+          <p className="subtitle">I am ipsum</p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
+
+export default Hero;

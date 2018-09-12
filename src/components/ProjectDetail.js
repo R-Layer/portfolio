@@ -2,7 +2,7 @@ import React from "react";
 
 export default props => {
   return (
-    <div>
+    <article>
       <h4 className="title is-4 project-title">{props.prj.title}</h4>
       <div className="columns">
         {!props.inverse && (
@@ -20,6 +20,6 @@ export default props => {
         )}
       </div>
       <hr />
-    </div>
+    </article>
   );
 };

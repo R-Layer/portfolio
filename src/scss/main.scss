@@ -26,11 +26,12 @@
   }
 }
 
-.is-current {
-  text-decoration: underline overline crimson;
-  background-color: lightcoral;
-  transition: all 150ms linear;
+/* Semantic HTML related  */
+.hidden-outline {
+  display: none;
 }
+
+/* Main page  */
 
 .section-title {
   background-color: #123;
@@ -41,6 +42,34 @@
   font: italic 400 1.5rem Verdana;
 }
 
+.very-bottom {
+  height: 1000px;
+}
+/* Navbar */
+
+.navbar-end {
+  .navbar-item {
+    color: lightblue;
+    &:hover {
+      background-color: #dedede;
+      color: #222;
+    }
+
+    p {
+      transition: all 500ms ease-in-out;
+    }
+  }
+}
+
+.is-at-top {
+  display: none;
+}
+
+.is-current {
+  outline: 1px double #777;
+  outline-offset: 0.5rem;
+}
+/* Project container */
 .project-title {
   border-top: 1px dashed #222;
   border-bottom: 1px dashed #222;
@@ -49,13 +78,9 @@
   font: 500 1.2rem Verdana;
 }
 
-.bottom {
-  margin-bottom: 800px;
-  border: 1px solid red;
-}
-
-.very-bottom {
-  margin-bottom: 800px;
-  border: 1px solid red;
+/* Contacts */
+.controlled-form {
+  max-width: 1000px;
+  margin: 6rem auto;
 }
 @include slide-in-out();

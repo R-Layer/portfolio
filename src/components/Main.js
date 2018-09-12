@@ -1,12 +1,15 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import "../css/main.css";
 
-import { Element, Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+import SectionElement from "./SectionElement";
+import BlockLink from "./BlockLink";
 //import { CSSTransition } from "react-transition-group";
 import ProjectsContainer from "./ProjectsContainer";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
+import Contacts from "./Contacts";
 
 import { projects } from "../projects";
 
@@ -18,43 +21,72 @@ class Main extends Component {
     };
   }
 
+  backToTop = () => {
+    scroll.scrollToTop();
+  };
+
   render() {
     return (
-      <main>
+      <Fragment>
+        <h1 className="hidden-outline" aria-hidden="true">
+          Layer's site
+        </h1>
         <header>
           <Navbar>
-            <Link
+            {/* First child, placed left */}
+            <BlockLink
+              activeClass={"is-at-top"}
+              spy={true}
+              to={"hero"}
+              smooth={true}
+              duration={1000}
+              offset={-70}
+            >
+              <span className="icon is-medium">
+                <i className="fas fa-arrow-up fa-lg" />
+              </span>
+            </BlockLink>
+            {/* Other childs, placed right [<1088px listed in the burger] */}
+            <BlockLink
               activeClass={"is-current"}
               spy={true}
               to={"portfolio"}
               smooth={true}
               duration={1000}
-              offset={-60}
+              offset={-52}
             >
-              Link to bottom
-            </Link>
-            <Link
+              Portfolio
+            </BlockLink>
+            <BlockLink
               activeClass={"is-current"}
               spy={true}
               to={"about"}
               smooth={true}
               duration={1000}
-              offset={-60}
+              offset={-50}
             >
-              Link to very bottom
-            </Link>
+              Contacts
+            </BlockLink>
           </Navbar>
         </header>
-        <Hero />
-        <Element name="portfolio">
-          <p className="section-title">Portfolio</p>
-          <ProjectsContainer projects={projects} />
-        </Element>
-        <Element name="about">
-          <p className="section-title">Very Btm</p>
-        </Element>
-        <div onClick={scroll.scrollToTop}>Link to top</div>
-      </main>
+        <main>
+          <SectionElement name="hero">
+            <h3 className="hidden-outline">Hero section</h3>
+            <Hero />
+          </SectionElement>
+          <SectionElement name="portfolio">
+            <h3 className="section-title">Portfolio</h3>
+            <ProjectsContainer projects={projects} />
+          </SectionElement>
+          <SectionElement name="about">
+            <h3 className="section-title">Contacts</h3>
+            <Contacts />
+          </SectionElement>
+          <div onClick={scroll.scrollToTop} className="very-bottom">
+            Link to top
+          </div>
+        </main>
+      </Fragment>
     );
   }
 }

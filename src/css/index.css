@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+/* $navbar-background-color: transparent;
+$navbar-box-shadow-color: #465564; */
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -3969,7 +3971,7 @@ a.dropdown-item {
   padding: 20px; }
 
 .navbar {
-  background-color: transparent;
+  background-color: #123;
   min-height: 3.25rem;
   position: relative;
   z-index: 30; }
@@ -4359,7 +4361,7 @@ a.dropdown-item {
     min-height: 3.25rem;
     width: 100%; }
   .navbar.has-shadow {
-    box-shadow: 0 2px 0 0 #465564; }
+    box-shadow: 0 2px 0 0 #499; }
   .navbar.is-fixed-bottom, .navbar.is-fixed-top {
     left: 0;
     position: fixed;
@@ -4368,7 +4370,7 @@ a.dropdown-item {
   .navbar.is-fixed-bottom {
     bottom: 0; }
     .navbar.is-fixed-bottom.has-shadow {
-      box-shadow: 0 -2px 0 0 #465564; }
+      box-shadow: 0 -2px 0 0 #499; }
   .navbar.is-fixed-top {
     top: 0; }
 
@@ -4515,7 +4517,7 @@ a.navbar-item,
   .navbar-link::after {
     display: none; }
   .navbar-menu {
-    background-color: transparent;
+    background-color: #123;
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0; }
     .navbar-menu.is-active {
