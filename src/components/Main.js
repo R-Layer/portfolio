@@ -10,6 +10,7 @@ import ProjectsContainer from "./ProjectsContainer";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Contacts from "./Contacts";
+import Footer from "./Footer";
 
 import { projects } from "../projects";
 
@@ -82,9 +83,7 @@ class Main extends Component {
             <h3 className="section-title">Contacts</h3>
             <Contacts />
           </SectionElement>
-          <div onClick={scroll.scrollToTop} className="very-bottom">
-            Link to top
-          </div>
+          <Footer />
         </main>
       </Fragment>
     );

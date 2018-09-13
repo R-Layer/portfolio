@@ -9,6 +9,8 @@ class Navbar extends Component {
   };
 
   componentDidMount() {
+    document.addEventListener("click", this.navStateHandler);
+
     const childrenArray = React.Children.toArray(this.props.children);
     this.setState({
       firstChild: childrenArray.shift(),
@@ -16,13 +18,30 @@ class Navbar extends Component {
     });
   }
 
+  componentWillUnmount = () => {
+    document.removeEventListener("click", this.navStateHandler);
+  };
+  // --------------------------------------------
+  // OutsideClick check: Credits to  Paul Fitzgerald [STACK OVERFLOW]
+
+  navStateHandler = event => {
+    const hamburgerMenu = this.node;
+    if (hamburgerMenu && !hamburgerMenu.contains(event.target)) {
+      this.setState({
+        isMenuActive: false
+      });
+    }
+  };
+
+  // -----------------------------------------------
+
   render() {
     return (
       <nav
         className="navbar is-fixed-top has-shadow "
         aria-label="main navigation"
       >
-        <h1 className="hidden-outline" role="navigation" aria-hidden="true">
+        <h1 className="hidden-outline" aria-hidden="true">
           Navbar
         </h1>
         <div className="navbar-brand">
@@ -36,6 +55,7 @@ class Navbar extends Component {
             onClick={() =>
               this.setState({ isMenuActive: !this.state.isMenuActive })
             }
+            ref={node => (this.node = node)}
           >
             <span aria-hidden="true" />
             <span aria-hidden="true" />

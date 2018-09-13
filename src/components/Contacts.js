@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Contacts extends Component {
   render() {
     return (
-      <form className="controlled-form">
+      <form className="controlled-width-section">
         {/* USERNAME */}
         <div className="field is-horizontal">
           <div className="field-label is-normal">
