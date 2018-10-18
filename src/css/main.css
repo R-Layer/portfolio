@@ -2,22 +2,18 @@
 .hidden-outline {
   display: none; }
 
-/* Main page  */
-.section-title {
+/****************************************************************/
+/********************** Navbar **********************************/
+/****************************************************************/
+.navbar,
+.navbar-menu {
   background-color: #123;
-  color: #499;
-  padding: 1rem;
-  text-align: start;
-  font: italic 400 1.5rem Verdana; }
+  box-shadow: 0 2px #499; }
 
-section:nth-child(3) {
-  margin-bottom: 25rem; }
-
-/* Navbar */
 .navbar-burger,
 .navbar-item {
   cursor: pointer;
-  color: lightblue; }
+  color: #add8e6; }
   .navbar-burger:hover,
   .navbar-item:hover {
     background-color: #dedede;
@@ -32,10 +28,75 @@ section:nth-child(3) {
   transition: all 500ms ease-in; }
 
 .is-current {
-  outline: 1px double #777;
+  outline: 1px double #add8e6;
   outline-offset: 0.5rem; }
 
-/* Project container */
+/****************************************************************/
+/********************** Hero ************************************/
+/****************************************************************/
+.hero.is-fullheight {
+  background: radial-gradient(farthest-corner at 0px 0px, #123, #499 80%); }
+
+.hero-header {
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 20rem; }
+
+@keyframes slide-in {
+  0% {
+    margin-left: 5%; }
+  50% {
+    margin-left: 9%; }
+  100% {
+    margin-left: 7%; } }
+
+.hero-title {
+  color: #123;
+  font: 600 4rem Courier;
+  text-shadow: 2px 2px 8px #499;
+  flex: 100% 0 0;
+  animation: slide-in 10s forwards; }
+
+@keyframes slide-in-reverse {
+  0% {
+    margin-left: 15%; }
+  50% {
+    margin-left: 11%; }
+  100% {
+    margin-left: 13%; } }
+
+.hero-subtitle {
+  color: #499;
+  font: 600 3rem Courier;
+  text-shadow: 2px 2px 8px #123;
+  margin-left: 15%;
+  animation: slide-in-reverse 10s forwards; }
+
+.svg-container {
+  position: relative;
+  height: 100vh; }
+
+.svg-main-path {
+  fill: #123; }
+
+.svg-line {
+  stroke: #499;
+  stroke-width: 0.2; }
+
+/****************************************************************/
+/********************** Project section *************************/
+/****************************************************************/
+.section-title {
+  background-color: #123;
+  color: #499;
+  padding: 1rem;
+  text-align: start;
+  font: italic 400 1.5rem Verdana; }
+
+section:nth-child(3) {
+  margin-bottom: 25rem; }
+
 .project-title {
   border-top: 1px dashed #222;
   border-bottom: 1px dashed #222;
@@ -43,7 +104,15 @@ section:nth-child(3) {
   text-align: center;
   font: 500 1.2rem Verdana; }
 
-/* Contacts */
+.project-caption {
+  padding: 0.5rem; }
+
+.project-description {
+  white-space: pre-wrap; }
+
+/****************************************************************/
+/********************** Contacts ********************************/
+/****************************************************************/
 .controlled-width-section {
   max-width: 1000px;
   margin: 4rem auto;
@@ -69,7 +138,9 @@ section:nth-child(3) {
 .slide-exit-done {
   transform: translateX(-100%); }
 
-/* Footer */
+/****************************************************************/
+/********************** Footer **********************************/
+/****************************************************************/
 .footer-stripe {
   background-color: #123;
   color: #499;
@@ -96,44 +167,6 @@ section:nth-child(3) {
 @media screen and (max-width: 400px) {
   .is-optional {
     display: none; } }
-
-.hero.is-fullheight {
-  background: radial-gradient(farthest-corner at 0px 0px, #123, #499 80%); }
-
-.hero-header {
-  display: flex;
-  flex-flow: row wrap;
-  margin-top: 20rem; }
-
-.hero-title {
-  color: #123;
-  font: 600 4rem Courier;
-  text-shadow: 2px 2px 8px #499;
-  flex: 100% 0 0;
-  animation: slide-in 10s forwards; }
-
-.hero-subtitle {
-  color: #499;
-  font: 600 3rem Courier;
-  text-shadow: 2px 2px 8px #123;
-  margin-left: 15%;
-  animation: slide-in-reverse 10s forwards; }
-
-@keyframes slide-in {
-  0% {
-    margin-left: 5%; }
-  50% {
-    margin-left: 9%; }
-  100% {
-    margin-left: 7%; } }
-
-@keyframes slide-in-reverse {
-  0% {
-    margin-left: 15%; }
-  50% {
-    margin-left: 11%; }
-  100% {
-    margin-left: 13%; } }
 
 /* .palette {
   position: absolute;

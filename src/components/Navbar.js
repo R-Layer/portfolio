@@ -37,10 +37,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-fixed-top has-shadow "
-        aria-label="main navigation"
-      >
+      <nav className="navbar is-fixed-top" aria-label="main navigation">
         <h1 className="hidden-outline" aria-hidden="true">
           Navbar
         </h1>

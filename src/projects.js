@@ -7,11 +7,11 @@ export const projects = [
       "Lorem ipsum tamen tal qual bal ego ortum daten consectetur in ab exo ocsecutur. Lorem ipsum tamen tal qual bal ego ortum daten consectetur in        ab exo ocsecutur. Lorem ipsum tamen tal qual bal ego ortum daten consectetur in ab exo ocsecutur"
   },
   {
-    title: "Second project",
-    imageUrl: "assets/Beach-Sunset-Pictures.jpg",
-    imageCaption: "Test caption v2",
+    title: "ByD - Brew your Dog!",
+    imageUrl: "assets/brew-app.png",
+    imageCaption: "Overview of the main page",
     description:
-      "Lorem ipsum tamen tal qual bal ego ortum daten consectetur in ab exo ocsecutur. Lorem ipsum tamen tal qual bal ego ortum daten consectetur in        ab exo ocsecutur. Lorem ipsum tamen tal qual bal ego ortum daten consectetur in ab exo ocsecutur"
+      "A simple app made to explore the brew-dog API.\nI struggle a bit to animate the cards and finally i opted for a very cool library: React Flip Move, by Joshua Comeau"
   },
   {
     title: "Third project",

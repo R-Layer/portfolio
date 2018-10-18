@@ -69,10 +69,7 @@ class Contacts extends Component {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <textarea
-                  className="textarea"
-                  placeholder="Explain how we can help you"
-                />
+                <textarea className="textarea" placeholder="What's up?" />
               </div>
             </div>
           </div>
@@ -84,7 +81,7 @@ class Contacts extends Component {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <button className="button is-primary">Send message</button>
+                <button className="button">Send message</button>
               </div>
             </div>
           </div>

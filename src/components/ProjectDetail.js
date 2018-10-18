@@ -8,10 +8,14 @@ export default props => {
         {!props.inverse && (
           <figure className="column is-7">
             <img src={props.prj.imageUrl} alt="screenshot" className=" image" />
-            <figcaption>{props.prj.imageCaption}</figcaption>
+            <figcaption className="project-caption">
+              {props.prj.imageCaption}
+            </figcaption>
           </figure>
         )}
-        <p className="column is-5">{props.prj.description}</p>
+        <p className="column is-5 project-description">
+          {props.prj.description}
+        </p>
         {props.inverse && (
           <figure className="column is-7">
             <img src={props.prj.imageUrl} alt="screenshot" className=" image" />
